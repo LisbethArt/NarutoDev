@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto Data</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Naruto's Characters Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Jutsu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(character => { %>
+                <tr>
+                    <td><%= character.id %></td>
+                    <td><%= character.name %></td>
+                    <td><%= character.jutsu.join(', ') %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
